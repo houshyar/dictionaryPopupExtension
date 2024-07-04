@@ -1,0 +1,45 @@
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="./output.css" rel="stylesheet">
+  <title>Dictionary Popup</title>
+</head>
+<!--
+  Chrome extension with Tailwind CSS interferes with websites' own css
+  good example of the interfere: https://www.w3schools.com/
+  The solution is disabling Preflight in the config to prevent some predefined configs  
+  because you’re integrating Tailwind into an existing project
+-->
+
+  <body id="popup_dictionary" class="pd-m-0 pd-overflow-hidden">
+    <div class="pd-flex pd-flex-col pd-items-center pd-w-80 pd-p-2 pd-bg-gray-100">
+      <a href="https://www.dictionary.com/" target="_blank" title="Dictionary.com">
+        <svg class="pd-w-12 pd-h-12" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="23" cy="23" r="22.5" fill="white" stroke="#CECECE"/>
+          <path d="M25.0312 9.66073L10.8135 9.54721C10.71 9.54596 10.6102 9.58526 10.5356 9.65659C10.461 9.72793 10.4177 9.82557 10.415 9.92839V34.2444C10.4166 34.3186 10.4374 34.3912 10.4755 34.455C10.5136 34.5189 10.5676 34.5719 10.6324 34.6089L21.2833 40.7447C21.3628 40.7909 21.4575 40.8043 21.5468 40.7818C21.6361 40.7594 21.7129 40.7029 21.7608 40.6247C21.7932 40.5702 21.8102 40.508 21.81 40.4447V17.7171C21.8102 17.6388 21.7888 17.5619 21.7482 17.4947C21.7076 17.4275 21.6493 17.3726 21.5796 17.336L15.9249 14.2672C15.8763 14.2424 15.8384 14.201 15.8181 14.1506C15.7978 14.1003 15.7965 14.0443 15.8144 13.993C15.8325 13.9417 15.8688 13.8987 15.9164 13.8719C15.9641 13.8451 16.0199 13.8363 16.0735 13.8472L26.2981 15.5824C26.3904 15.5999 26.4737 15.6486 26.5338 15.7203C26.5939 15.792 26.6272 15.8822 26.6278 15.9755V36.4382C26.6277 36.491 26.6381 36.5433 26.6585 36.5921C26.6788 36.6409 26.7086 36.6851 26.7463 36.7224C26.784 36.7596 26.8287 36.7891 26.8778 36.8091C26.927 36.829 26.9797 36.8391 27.0328 36.8388H27.0793C34.653 35.9989 39.8136 30.7289 39.9232 23.4191C40.0263 15.2427 33.9034 9.77518 25.0312 9.66073Z" fill="#0049D7"/>
+        </svg>
+      </a>
+      <h1 class="pd-w-max pd-z-10 pd-font-bold pd-text-blue-500 pd-text-lg pd-mt-2 pd-px-1 pd-bg-white pd-rounded-md pd-border-solid pd-border pd-border-slate-300 pd-text-center">Dictionary Popup</h1>
+      <p class="pd-leading-4 pd-p-2 pd-pt-5 pd-text-slate-700 pd-z-0 pd--mt-6 pd-bg-white pd-border-solid pd-border pd-rounded-md pd-border-slate-300 pd-text-left">
+        Just double click on a word to see the definition from Dictionary.com 
+        in a popup, as simple as that, no history, no extra tab, 
+        an open-source project and light.
+      </p>
+      <div class="pd-p-2 pd-text-center pd-text-slate-700 pd-bg-white pd-border pd-border-solid pd-rounded-md pd-border-slate-300">
+        <div class="pd-m-3">
+          <strong>Shortcut:</strong> <span id="current-shortcut">Alt+DoubleClick</span>
+        </div>
+        <button id="change-shortcut-button" class="pd-clear-both pd-text-white pd-px-3 pd-py-2 pd-text-sm pd-font-medium pd-text-center pd-items-center pd-border-0 pd-bg-blue-700 pd-rounded-lg hover:pd-bg-blue-800 focus:pd-ring-4 focus:pd-outline-none focus:pd-ring-blue-300 pd-mb-2 pd-cursor-pointer">
+          <i class="fa fa-pencil fa-fw mr-1" aria-hidden="true"></i><span>Change Shortcut</span>
+        </button>
+        <button id="pause-on-this-tab" class="pd-clear-both pd-px-3 pd-py-2 pd-text-sm pd-font-medium pd-text-center pd-items-center pd-border-0 pd-text-white pd-bg-red-500 pd-rounded-lg hover:pd-bg-red-600 focus:pd-ring-4 focus:pd-outline-none focus:pd-ring-red-300 pd-mb-2 pd-cursor-pointer">
+          <i class="fa fa-circle-pause fa-fw pd-mr-1"></i><span>Pause on this tab</span>
+        </button>
+        <a href="https://github.com/" target="_blank" class="pd-block pd-no-underline pd-text-black hover:pd-underline visited:pd-text-black">
+          Dictionary Popup on <i class="fa-brands fa-github pd-text-blue-500"></i>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
