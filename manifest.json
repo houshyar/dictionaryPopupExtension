@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "English Dictionary Popup",
+    "name": "Dictionary Popup",
     "description": "Just double click on a word to see the definition from Dictionary.com in a popup, as simple as that, no history, no extra tab, an open-source project and light.",
     "version": "1.0",
     "action": {

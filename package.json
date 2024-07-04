@@ -4,7 +4,7 @@
     "tailwinds": "^0.0.0",
     "tailwindscss": "^0.3.0"
   },
-  "name": "dictionary-extension",
+  "name": "dictionary_popup",
   "version": "1.0.0",
   "description": "Just double click on a word to see the definition from Dictionary.com in a popup, as simple as that, no history, no extra tab, an open-source project and light.",
   "main": "tailwind.config.js",
