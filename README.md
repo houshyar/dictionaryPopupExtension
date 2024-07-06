@@ -35,6 +35,8 @@ When you come across a word you don't understand, simply use the shortcut and se
 2. Give the extension files a permanent home.
 3. In Chrome, navigate to `chrome://extensions/` and enable the developer mode.
 4. Drag and drop the extension folder from your file manager onto the extensions page in Chrome.
+![Popup Dictionary Extension](popupDictionaryPanel.png?raw=true "Popup Dictionary Extension panel")
+
 
 ### Usage
 1. After installing the extension, navigate to any webpage.
