@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 togglePauseText.textContent = 'Pause on this Website';
                 pauseIcon.classList.add('fa-circle-pause');
             }
-            
+
             togglePauseButton.addEventListener('click', function() {
                 pausedDomains[domain] = !pausedDomains[domain];
                 chrome.storage.sync.set({ pausedDomains: pausedDomains }, function() {
@@ -83,7 +83,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 tabs.forEach(function(tab) {
                 chrome.tabs.sendMessage(tab.id, { action: 'updateModifierKey', modifierKey: selectedModifierKey });
                 });
-            });                   
+            }); 
+            settingsPanel.classList.toggle('pd-left-0');
+            settingsPanel.classList.toggle('pd-left-80');
+                      
         });
     });
 
