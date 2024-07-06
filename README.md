@@ -5,6 +5,9 @@ For many non-native English speakers, reading content online can sometimes be ch
 
 The Dictionary Popup Chrome Extension is designed to alleviate this common issue. Instead of opening a new tab and searching for a word's meaning, this extension allows you to quickly and effortlessly see the definition of any word directly on the webpage you are reading.
 
+![Popup Dictionary Extension](popupDictionary.png?raw=true "Popup Dictionary Extension in use")
+
+
 ### How It Works:
 When you come across a word you don't understand, simply use the shortcut and select the word. A popup will appear right on the webpage, displaying the definition from Dictionary.com. This seamless integration ensures you can stay focused on your reading without unnecessary interruptions.
 
@@ -13,6 +16,7 @@ When you come across a word you don't understand, simply use the shortcut and se
 - **Pronunciation Guide:** Listen to the pronunciation of the word to improve your language skills.
 - **Direct Link:** Click through to Dictionary.com for more detailed information if needed.
 - **User-Friendly Shortcut:** Easily trigger the popup with a simple keyboard shortcut.
+- **Pause the Extension:** Pause the extension on a specific website.
 
 ### Benefits:
 - **Maintain Focus:** Keep your concentration on your reading material without the hassle of switching tabs.
@@ -21,14 +25,14 @@ When you come across a word you don't understand, simply use the shortcut and se
 
 ### Installation
 
-#### Installation via Chrome Web Store:
+<!-- #### Installation via Chrome Web Store:
 1. Open the Chrome Web Store.
 2. Find and select the extension via this link.
-3. Click **Add to Chrome**.
+3. Click **Add to Chrome**. -->
 
 #### Manual Installation:
-1. Download the extension.
-2. Extract the files into their own folder. Give the extension files a permanent home.
+1. Download the "src" folder.
+2. Give the extension files a permanent home.
 3. In Chrome, navigate to `chrome://extensions/` and enable the developer mode.
 4. Drag and drop the extension folder from your file manager onto the extensions page in Chrome.
 
@@ -36,8 +40,7 @@ When you come across a word you don't understand, simply use the shortcut and se
 1. After installing the extension, navigate to any webpage.
 2. To look up a word, hold down the `Alt` key and double-click on the word you want to define. 
 3. A popup will appear around the selected word displaying the definition from Dictionary.com.
-4. You can change the shortcut in the extension settings if needed.
-5. For further details or visual guides, refer to the screenshots available on the repository page.
+4. You can change the modifier in the extension settings if needed.
 
 ### Contributing
 We welcome contributions of all kinds, whether it's new ideas, bug fixes, or new features. As an open-source project, we value and encourage community involvement to make this extension better for everyone. To contribute, please follow these steps:
@@ -58,9 +61,6 @@ I couldn't have written this extension without the help from ChatGPT.
 
 ### Project Status
 Stable
-
-### Contact Information
-For any questions or issues, please contact Ebi.houshyar@gmail.com.
 
 ## Roadmap
 Future plans for the extension include:
