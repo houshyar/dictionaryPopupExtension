@@ -20,7 +20,6 @@ function createPopup() {
   document.addEventListener('click', function(event) {
     if (event.target !== popup && !popup.contains(event.target)) {
       popup.classList.add("pd-hidden");
-      //console.log("working...");
     }
   });
 
@@ -132,14 +131,7 @@ async function fetchWordData(word) {
     throw new Error('Definition not found');
   }
 }
-// // Function to get the modifier key from Chrome storage
-// function getModifierKey(callback) {
-//   chrome.storage.sync.get('modifierKey', function(data) {
-//     const modifierKey = data.modifierKey || 'Alt'; // Default to 'Alt' if not set
-//     callback(modifierKey);
-//   });
-// }  
-  
+
 // Fetch the modifier key and set up the event listener
 async function setupDoubleClickListener(modifierKey) {
   document.removeEventListener('dblclick', handleDoubleClick); // Remove the existing listener, if any
@@ -170,7 +162,12 @@ async function setupDoubleClickListener(modifierKey) {
     }
   }
 
-  document.addEventListener('dblclick', handleDoubleClick);
+  // Check if the current domain is paused by sending a message to the background script
+  chrome.runtime.sendMessage({ action: 'checkDomain' }, function(response) {
+    if (!response.isPaused) {
+      document.addEventListener('dblclick', handleDoubleClick);
+    }
+  });
 
 }
 

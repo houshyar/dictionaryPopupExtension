@@ -12,6 +12,9 @@
         "128": "src/images/dictionary_icon_128.png"  
       }
     },
+    "background": {
+      "service_worker": "src/scripts/background.js"
+    },
     "permissions": [
       "storage",
       "activeTab",
